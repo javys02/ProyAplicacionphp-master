@@ -2,7 +2,7 @@
 
 require_once("../Settings/conexion.php");
 
-$Email = $_POST['Carnet'];
+$Carnet = $_POST['Carnet'];
 
 $Consulta = "SELECT idUsuario, Nombre, Apellido, Carnet, Email FROM Usuario WHERE Carnet = '$Carnet'";
 $res_Consulta = mysqli_query( $conexion, $Consulta ) or die ( "Error en la consulta del listado en la base de datos");
