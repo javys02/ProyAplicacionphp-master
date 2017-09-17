@@ -11,7 +11,7 @@
 	$tamCodeQR = 10;
 	$CorrectionError = "M"; // M Q (H mejor)
 
-	if (!is_null($Carnet) && $Nombre!="") && $Apellido!="")) {
+	if (!is_null($Carnet) && $Nombre!="" && $Apellido!="") {
 	  	QRcode::png($Carnet, $filename, $CorrectionError, $tamCodeQR, 2); 
 
 		$UsuarioNuevo = "INSERT INTO Usuario (Nombre, Apellido, Carnet, Email ) value ('$Nombre', '$Apellido', '$Carnet', '$Email')";
