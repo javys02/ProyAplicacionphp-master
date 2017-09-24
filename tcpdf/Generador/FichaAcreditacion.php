@@ -68,15 +68,15 @@ $htmlTab1 = '<table border="2" CELLPADDING="5" CELLSPACING="0">
 				        </tr>
 				        <tr align="center">
 				           <td COLSPAN="2" ><strong>Apellido</strong></td>
-				           <td COLSPAN="4"> '.$Apellido.'  </td>
+				           <td COLSPAN="4">'.$Apellido.'</td>
 				        </tr>
 				        <tr align="center">
 				           <td COLSPAN="2" ><strong>No.C.I.</strong></td>
-				           <td COLSPAN="4"> '.$Carnet.'  </td>
+				           <td COLSPAN="4">'.$Carnet.'</td>
 				        </tr>
 				        <tr align="center">
 				           <td COLSPAN="2" ><strong>Email</strong></td>
-				           <td COLSPAN="4"> '.$Email.'  </td>
+				           <td COLSPAN="4">'.$Email.'</td>
 				        </tr>
 				     </table>
 			  </td>
@@ -99,7 +99,8 @@ $html = $html1.'<br />'.$htmlTab1.$htmlTab2.'<br />'.$html3;
 	 $pdf->writeHTML($html, true, false, true, false, '');
 
 
-$NombreArchivo='FichaAcreditacion'.$Data['Codigo'].'.pdf';
+//$NombreArchivo='FichaAcreditacion'.$Data['Codigo'].'.pdf';
+$NombreArchivo='FichaAcreditacion'.$Carnet.'.pdf';
 //Close and output PDF document
 $pdf->Output($NombreArchivo, 'I');
 

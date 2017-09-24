@@ -13,13 +13,14 @@
     <body class="bg-black">
 
         <div class="form-box" id="login-box">
-            <div class="header">Usuario Registrado</div>
+            <img src="static/images/logodonbosco.png" /> 
+            <div class="header bg-blue" >Usuario Registrado</div>
            
                 <div class="body bg-gray" align="center">
-                    <h2>Felicitaciones .$_GET['nombre']. te has registrado correctamente</h2>
+                    <h2>Felicitaciones <?php echo $_GET['nombre']." ".$_GET['apellido']; ?> te has registrado correctamente</h2>
                 </div>
                 <div class="footer">            
-                    <a href="tcpdf/Generador/FichaAcreditacion.php?email=<?php echo $_GET['email']."&nombre=". $_GET['nombre']."&apellido=". $_GET['apellido']."&carnet=". $_GET['carnet'];?>" target="_blank"><button class="btn btn-success btn-block"><b>Descargar Ficha Acreditación</b></button></a>
+                    <a href="tcpdf/Generador/FichaAcreditacion.php?email=<?php echo $_GET['email']."&nombre=".$_GET['nombre']."&apellido=".$_GET['apellido']."&carnet=".$_GET['carnet'];?>" target="_blank"><button class="btn btn-success btn-block bg-blue"><b>Descargar Ficha Acreditación</b></button></a>
                     
                     <hr>
                     <a href="index.php" >Registrar otro usuario</a>
@@ -28,7 +29,8 @@
                 </div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" /> 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
 
     </body>

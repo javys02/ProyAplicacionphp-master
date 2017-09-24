@@ -1,5 +1,7 @@
 <?php 
-
+//------------------------------------------------------------------------
+// ESCUCHA LA LECTURA DE UN CODIGO PARA ACREDITA AL USUARIO MEDIANTE SU CI
+//------------------------------------------------------------------------
 require_once("../Settings/conexion.php");
 
 $Carnet = $_POST['Carnet'];
@@ -13,10 +15,10 @@ if(!is_null($row_Consulta['idUsuario']) )
 {  // verifica si el dni ingresado existe en la base de datos
 	
 	$data = array('Rpta' => 1 ,'Nombre' => $row_Consulta['Nombre'],'Apellido' => $row_Consulta['Apellido'],'Carnet' => $row_Consulta['Carnet'],'Email' => $row_Consulta['Email']); 
-
+	// Devuel los datos del usuario registrado
 	print (json_encode($data)); 
 	
-	$Acreditado = "UPDATE Usuario SET Estado = 1 WHERE Carnet = '$Carnet'";
+	$Acreditado = "UPDATE Usuario SET Estado = 1, FechaAsistencia = Now() WHERE Carnet = '$Carnet'";
 	mysqli_query( $conexion, $Acreditado);
 }
 else

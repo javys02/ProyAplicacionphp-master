@@ -12,7 +12,11 @@
         // Datos de la base de datos nueva
 	$usuario = "userbd";
 	$password = "userbd";
-	$servidor = "mysql";
+	// SERVIDOR OPENSHIFT
+	//$servidor = "mysql";
+
+	// SERVIDOR LOCAL
+	$servidor = "localhost";
 	$basededatos = "acreditacionbd";
 	
 	// creación de la conexión a la base de datos con mysql_connect()

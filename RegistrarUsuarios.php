@@ -1,4 +1,7 @@
 <?php 
+//--------------------------------------------
+// Registra el usuario en la base de datos
+//--------------------------------------------
 	include_once('Settings/conexion.php');
 	include_once('static/lib/phpqrcode/qrlib.php');
 
@@ -11,10 +14,12 @@
 	$tamCodeQR = 10;
 	$CorrectionError = "M"; // M Q (H mejor)
 
-	if (!is_null($Carnet) && $Nombre!="" && $Apellido!="") {
+	if ($Carnet !="" && $Nombre!="" && $Apellido!="") {
+	  	// Genera codigo QR
 	  	QRcode::png($Carnet, $filename, $CorrectionError, $tamCodeQR, 2); 
 
-		$UsuarioNuevo = "INSERT INTO Usuario (Nombre, Apellido, Carnet, Email ) value ('$Nombre', '$Apellido', '$Carnet', '$Email')";
+  		// Inserta nuevo usuario en la BD
+		$UsuarioNuevo = "INSERT INTO Usuario (Nombre, Apellido, Carnet, Email) value ('$Nombre', '$Apellido', '$Carnet', '$Email')";
 
 		$resultado = mysqli_query( $conexion, $UsuarioNuevo ) or die ( "Algo ha ido mal en la consulta a la base de datos");
 
