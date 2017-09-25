@@ -18,7 +18,7 @@ if(!is_null($row_Consulta['idUsuario']) )
 	// Devuel los datos del usuario registrado
 	print (json_encode($data)); 
 	
-	$Acreditado = "UPDATE Usuario SET Estado = 1, FechaAsistencia = Now() WHERE Carnet = '$Carnet'";
+	$Acreditado = "UPDATE Usuario SET Estado = 1, FechaAsistencia = DATE_SUB(NOW(), INTERVAL 4 HOUR) WHERE Carnet = '$Carnet'";
 	mysqli_query( $conexion, $Acreditado);
 }
 else

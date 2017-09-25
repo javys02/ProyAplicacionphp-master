@@ -4,7 +4,7 @@ include_once('Settings/conexion.php');
 
 $query = "SELECT * FROM Usuario";
 
-$res_Usuarios = mysqli_query( $conexion, $query ) or die ( "Error en la consulta del listado en la base de datos");
+$res_Usuarios = mysqli_query( $conexion, $query ) or die ( "Error en la consulta del listado en la base de datos".mysqli_error($conexion));
 
 ?>
 <!DOCTYPE html>

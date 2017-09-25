@@ -31,8 +31,9 @@
                 </div>
                 <div class="footer">            
                     <button id="BtnRegistrar" type="submit" class="btn bg-blue btn-block">Enviar</button>
-                     <br>
                     <a href="ListaUsuarios.php">Ver inscritos</a>
+                     <br>
+                     <br>
                 </div>
             </form>
         </div>

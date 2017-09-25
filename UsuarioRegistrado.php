@@ -21,11 +21,12 @@
                 </div>
                 <div class="footer">            
                     <a href="tcpdf/Generador/FichaAcreditacion.php?email=<?php echo $_GET['email']."&nombre=".$_GET['nombre']."&apellido=".$_GET['apellido']."&carnet=".$_GET['carnet'];?>" target="_blank"><button class="btn btn-success btn-block bg-blue"><b>Descargar Ficha Acreditación</b></button></a>
-                    
                     <hr>
                     <a href="index.php" >Registrar otro usuario</a>
                     <br>
                     <a href="ListaUsuarios.php">Ver inscritos</a>
+                    <br>
+                    <br>
                 </div>
         </div>
 
